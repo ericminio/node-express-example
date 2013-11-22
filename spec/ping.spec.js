@@ -23,7 +23,7 @@ describe('Passing the ping level:', function() {
    
     it('answsers the expected pong', function(done) {
         request('http://localhost:7000/ping', function(error, response, body) {
-            expect(body).toEqual( JSON.stringify( { alive: true } ) );
+            expect(JSON.parse(body)).toEqual({ alive: true });
             done(); 
         });
     });
