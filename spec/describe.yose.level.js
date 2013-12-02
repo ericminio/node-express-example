@@ -10,6 +10,17 @@ var describeYoseLevel = function(title, tests) {
         beforeEach(function(done) {
             testServer = http.createServer(server).listen(7000, done);
         });
+        
+        beforeEach(function() {
+            this.addMatchers({
+                toHaveElement: function(selector) {
+                    this.message = function () {
+                        return "Element " + selector + " not found in given page";
+                    }
+                    return this.actual(selector).length > 0;
+                }
+            });
+        });
 
         afterEach(function() {
             testServer.close(); 
