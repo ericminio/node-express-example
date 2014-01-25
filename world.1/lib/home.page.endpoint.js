@@ -2,7 +2,7 @@ var fs = require('fs');
 
 var home = function(request, response) {
     response.setHeader('Content-Type', 'text/html');
-    var html = fs.readFileSync('./libs/challenge.landing.page/home.html').toString();
+    var html = fs.readFileSync('world.1/lib/home.html').toString();
     
     response.write(html);
     response.end();

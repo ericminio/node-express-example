@@ -1,4 +1,5 @@
-var extractInteger  = require('../query.string');
+var gotoRoot = '../../';
+var extractInteger  = require('./query.string');
 var primeFactorsOf  = require('./decompose');
 
 var endpoint = function(request, response) {

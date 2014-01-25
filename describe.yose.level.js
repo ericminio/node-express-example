@@ -1,5 +1,6 @@
+var gotoRoot = './';
 var http    = require('http');
-var server  = require('../libs/server');
+var server  = require(gotoRoot + 'lib/server');
 
 var describeYoseLevel = function(title, tests) {
     
