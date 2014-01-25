@@ -10,12 +10,30 @@ var extractParameter = function(name) {
         fromQueryStringIn: function(request) {
         	var parameter = url.parse(request.url, true).query[name];
 
-            if (theString(parameter).isANumber()) {
-                return answersWithDecomposition(parameter);
+            var cases = [
+                {
+                    isMatching: function(parameter) {
+                        return theString(parameter).isANumber();
+                    },
+                    answer: function(parameter) {
+                        return answersWithDecomposition(parameter);
+                    }
+                },
+                {
+                    isMatching: function(parameter) {
+                        return !theString(parameter).isANumber();
+                    },
+                    answer: function(parameter) {
+                        return answersWithErrorNotANumber(parameter);
+                    }
+                },
+            ];
+            if (cases[0].isMatching(parameter)) {
+                return cases[0].answer(parameter);
             }
             
-            if (! theString(parameter).isANumber()) {
-                return answersWithErrorNotANumber(parameter);
+            if (cases[1].isMatching(parameter)) {
+                return cases[1].answer(parameter);
             }
         }
     }    
