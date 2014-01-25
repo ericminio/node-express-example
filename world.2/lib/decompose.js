@@ -1,12 +1,10 @@
+var decompositionOfGivenNumberStartingWithPrime = function(factor, number) {
+    if (number === 1) return [];
+    if (number % factor ===0) return [factor].concat(decompositionOf(number / factor));
+};
+
 var decompositionOf = function(number) {
-    var decomposition = [];
-    while(number > 1) {
-        if (number % 2 == 0) {
-            decomposition.push(2);
-            number /= 2;
-        }
-    }
-    return decomposition;
+    return decompositionOfGivenNumberStartingWithPrime(2, number);
 };
 
 module.exports = decompositionOf;
