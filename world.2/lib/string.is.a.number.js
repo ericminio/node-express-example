@@ -1,4 +1,4 @@
-var the = function(parameter) {
+var theString = function(parameter) {
     return {
         isANumber: function() {
             return ! isNaN(parameter);
@@ -6,4 +6,4 @@ var the = function(parameter) {
     }
 };
 
-module.exports = the;
+module.exports = theString;
