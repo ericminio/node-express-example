@@ -1,6 +1,8 @@
 var primeFactorsOf = require('./decompose');
 
-var answer = function(number) {
+var answer = function(parameter) {
+    var number = parseInt(parameter);
+    
     return {
         decomposition: function() {
             return {

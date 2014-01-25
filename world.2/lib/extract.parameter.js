@@ -11,10 +11,12 @@ var extractParameter = function(name) {
         	var parameter = url.parse(request.url, true).query[name];
 
             if (theString(parameter).isANumber()) {
-                return answersWithDecomposition(parseInt(parameter));
+                return answersWithDecomposition(parameter);
             }
             
-            return answersWithErrorNotANumber(parameter)
+            if (! theString(parameter).isANumber()) {
+                return answersWithErrorNotANumber(parameter);
+            }
         }
     }    
 };
