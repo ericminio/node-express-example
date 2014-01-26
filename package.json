@@ -1,6 +1,6 @@
 {
-  "name": "yose-node-express-example",
-  "description": "An example to pass with express the ping challenge of @YoseTheGame",
+  "name": "yose-node-express",
+  "description": "How I play YoseTheGame with NodeJs",
   "version": "1.0.0",
   "private": false,
   "dependencies": {
@@ -16,6 +16,6 @@
     "cheerio": "0.12.4"
   },
   "scripts": {
-    "test": "jasmine-node spec"
+    "test": "jasmine-node ."
   }
 }
