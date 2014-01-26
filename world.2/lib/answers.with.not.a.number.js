@@ -1,6 +1,7 @@
 var answer = function(parameter) {
+    
     return {
-        decomposition: function() {
+        build: function() {
             return {
                 number: parameter,
                 error: 'not a number'

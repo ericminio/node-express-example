@@ -4,7 +4,7 @@ var answer = function(parameter) {
     var number = parseInt(parameter);
     
     return {
-        decomposition: function() {
+        build: function() {
             return {
                 number: number,
                 decomposition: primeFactorsOf(number)
