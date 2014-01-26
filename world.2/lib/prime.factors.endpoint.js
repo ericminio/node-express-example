@@ -6,7 +6,7 @@ var endpoint = function(request, response) {
 
     var parameter = url.parse(request.url, true).query['number'];
     
-    response.send(selectAnswerFor(parameter).build());
+    response.send(selectAnswerFor(parameter));
     
 };
 

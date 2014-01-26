@@ -1,12 +1,8 @@
 var answer = function(parameter) {
     
     return {
-        build: function() {
-            return {
-                number: parameter,
-                error: 'not a number'
-            }
-        }        
+        number: parameter,
+        error: 'not a number'
     };
 };
 
