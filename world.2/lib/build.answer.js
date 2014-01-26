@@ -1,6 +1,6 @@
 var cases = [ require('./parameter.is.a.number'), require('./parameter.is.a.string') ];
 
-var selectAnswerFor = function(parameter) {
+var buildAnswerFor = function(parameter) {
 
     for (var i = 0; i<cases.length; i++) {
         if (cases[i].isMatching(parameter)) {
@@ -9,4 +9,4 @@ var selectAnswerFor = function(parameter) {
     }
 };
 
-module.exports = selectAnswerFor;
+module.exports = buildAnswerFor;
