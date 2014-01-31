@@ -4,7 +4,7 @@ var request             = require('request');
 
 describeYoseLevel('Passing the power of two level:', function() {
 
-    it('answsers with application/json header', function(done) {
+    it('answers with application/json header', function(done) {
         request('http://localhost:7000/primeFactors', function(error, response, body) {
             expect(response.headers['content-type']).toEqual('application/json');
             done(); 
