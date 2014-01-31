@@ -5,20 +5,6 @@ var cheerio             = require('cheerio');
 
 describeYoseLevel('Passing the landing page level:', function() {
 
-    it('answers with text/html content-type', function(done) {
-        request('http://localhost:7000/', function(error, response, body) {
-            expect(response.headers['content-type']).toEqual('text/html');
-            done(); 
-        });
-    });
-   
-    it('answers without error', function(done) {
-        request('http://localhost:7000/', function(error, response, body) {
-            expect(response.statusCode).toEqual(200);
-            done(); 
-        });
-    });
-    
     describe('home page', function() {
        
        var page;
