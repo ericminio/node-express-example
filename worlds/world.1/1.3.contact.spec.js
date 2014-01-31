@@ -1,5 +1,5 @@
-var gotoRoot = '../';
-var describeYoseLevel   = require(gotoRoot + 'describe.yose.level');
+var gotoRoot = '../../';
+var describeYoseLevel   = require(gotoRoot + 'worlds/describe.yose.level');
 var request             = require('request');
 var cheerio             = require('cheerio');
 

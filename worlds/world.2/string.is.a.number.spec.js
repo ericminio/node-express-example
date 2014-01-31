@@ -1,5 +1,5 @@
-var gotoRoot = '../';
-var theString = require(gotoRoot + '/world.2/lib/string.is.a.number');
+var gotoRoot = '../../';
+var theString = require(gotoRoot + 'worlds/world.2/lib/string.is.a.number');
 
 describe('isANumber', function() {
    
