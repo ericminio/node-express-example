@@ -1,10 +1,13 @@
-var cases = [ require('./parameter.is.a.number'), require('./parameter.is.a.string') ];
+var cases = [ 
+        [ require('./parameter.is.a.number'), require('./answers.with.decomposition') ],
+        [ require('./parameter.is.a.string'), require('./answers.with.not.a.number') ]
+    ];
 
 var buildAnswerFor = function(parameter) {
 
     for (var i = 0; i<cases.length; i++) {
-        if (cases[i].isMatching(parameter)) {
-            return cases[i].answer(parameter);
+        if (cases[i][0](parameter)) {
+            return cases[i][1](parameter);
         }
     }
 };

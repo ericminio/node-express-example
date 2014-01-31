@@ -1,9 +1,7 @@
-var answer = function(parameter) {
+module.exports = function(parameter) {
     
     return {
         number: parameter,
         error: 'not a number'
     };
 };
-
-module.exports = answer;
