@@ -6,8 +6,16 @@ var endpoint = function(request, response) {
 
     var parameter = url.parse(request.url, true).query['number'];
     
-    response.send(buildAnswerFor(parameter));
-    
+	if (typeof parameter == 'object') {
+		var answer = [];
+		for(var i=0; i<parameter.length; i++) {
+			answer.push(buildAnswerFor(parameter[i]));
+		}
+		response.send(answer);
+	} 
+	else {
+		response.send(buildAnswerFor(parameter));
+	}
 };
 
 module.exports = endpoint;

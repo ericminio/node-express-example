@@ -15,4 +15,8 @@ server.get('/primeFactors', function(request, response) {
     require(gotoRoot + 'worlds/world.prime.factors/lib/prime.factors.endpoint')(request, response);
 });
 
+server.get('/fire/geek', function(request, response) {
+    require(gotoRoot + 'worlds/world.fire/lib/fire.geek.endpoint')(request, response);
+});
+
 module.exports = server;

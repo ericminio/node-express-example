@@ -1,6 +1,7 @@
 var cases = [ 
-        [ require('./parameter.is.a.number'), require('./answers.with.decomposition') ],
-        [ require('./parameter.is.a.string'), require('./answers.with.not.a.number') ]
+        [ require('./parameter.is.too.big'), require('./answers.with.error.too.big.number') ],
+        [ require('./parameter.is.a.number'),  require('./answers.with.decomposition') ],
+        [ require('./parameter.is.a.string'),  require('./answers.with.not.a.number') ]
     ];
 
 var buildAnswerFor = function(parameter) {
