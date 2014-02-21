@@ -3,7 +3,7 @@ var describeYoseLevel   = require(gotoRoot + 'worlds/describe.yose.level');
 var request             = require('request');
 var cheerio             = require('cheerio');
 
-describeYoseLevel('Passing the landing page level:', function() {
+describeYoseLevel('Passing the Portfolio ping level:', function() {
 
     describe('home page', function() {
        
