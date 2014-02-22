@@ -25,6 +25,21 @@ var fireIn = function(map) {
     return objectIn(map, 'F');
 }
 
+var watersIn = function(map) {
+    var waters = [];
+    for (var y=0; y< map.length; y++) {
+        var line = map[y];
+        for (var x=0; x<line.length; x++){
+            var land = line[x];
+            if (land == 'W') {
+                waters.push({ x:x, y:y });
+            }
+        }
+    }
+    return waters;
+}
+
 module.exports.planeIn = planeIn;
 module.exports.waterIn = waterIn;
 module.exports.fireIn  = fireIn;
+module.exports.watersIn = watersIn;

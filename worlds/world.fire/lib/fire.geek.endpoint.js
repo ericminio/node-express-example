@@ -2,6 +2,7 @@ var url = require('url');
 var positionOf = require('./objects.position.in.map');
 var avoidFire = require('./avoid');
 var buildPathBetween = require('./path.builder');
+var gotoNearestWater = require('./go.to.nearest.water');
 
 var sendAnswer = function(response, answer) {
 	response.writeHead(200, {"Content-Type": "application/json"});
@@ -20,16 +21,24 @@ var extractMap = function(incoming) {
 
 geek = function(incoming, response) {
     var map = extractMap(incoming);    
+
+    var fire = positionOf.fireIn(map);
     var plane = positionOf.planeIn(map);
     var water = positionOf.waterIn(map);
-    var fire = positionOf.fireIn(map);
+    var moves;
     
-    var movesToWater = avoidFire(map);
-    var movesFromWaterToFire = buildPathBetween(water, fire);
+    if (fire == undefined) {
+        moves = gotoNearestWater(map);
+    }
+    else {
+        var movesToWater = avoidFire(map);
+        var movesFromWaterToFire = buildPathBetween(water, fire);
+        moves = movesToWater.concat(movesFromWaterToFire);
+    }
     
     var answer = {
         map: map,
-        moves: movesToWater.concat(movesFromWaterToFire)
+        moves: moves
     };    
 	sendAnswer(response, answer);
 }

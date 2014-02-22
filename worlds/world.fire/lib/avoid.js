@@ -69,6 +69,10 @@ var avoidFire = function(map) {
     if (pathContainsFire) {
         return avoid(fire, plane, water, map);
     }
+
+    if (fire === undefined) {
+        return pathBetweenPlaneAndWater;
+    }
     
     var waterToFire = buildPathBetween(water, fire);
     return pathBetweenPlaneAndWater.concat(waterToFire);

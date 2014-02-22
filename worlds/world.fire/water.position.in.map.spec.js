@@ -2,10 +2,10 @@ var positionOf = require('./lib/objects.position.in.map');
 
 describe('Water position', function() {
     
-    var plane;
+    var water;
     
     beforeEach(function() {
-        plane = positionOf.waterIn([
+        water = positionOf.waterIn([
                 ".....",
                 "..W..",
                 "....."
@@ -13,10 +13,10 @@ describe('Water position', function() {
     });
     
     it('is known in a map (x)', function() {
-        expect(plane.x).toEqual(2);
+        expect(water.x).toEqual(2);
     });
 
     it('is known in a map (y)', function() {
-        expect(plane.y).toEqual(1);
+        expect(water.y).toEqual(1);
     });
 });
