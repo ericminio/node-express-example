@@ -23,7 +23,7 @@ describeYoseLevel('Passing the contact information level:', function() {
        describe('contact-me element', function() {
            
            it('targets my LinkedIn account', function() {
-               expect(page('a#contact-me-link').attr('href')).toEqual('http://ca.linkedin.com/in/ericmignot');
+               expect(page('a#contact-me-link').attr('href')).toEqual('http://www.linkedin.com/in/ericmignot');
            });  
            
            it('has a text', function() {
