@@ -1,3 +1,3 @@
 ![Yose score](http://yosethegame.com/players/ericminio/badge.svg)
 
-See it working : http://ericminio-yose.herokuapp.com/
+My implementation of YoseTheGame challenges using Node and Express: http://ericminio-yose.herokuapp.com/
