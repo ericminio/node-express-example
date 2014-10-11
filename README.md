@@ -1,3 +1,3 @@
-YoseTheGame with node.js
+![Yose score](http://yosethegame.com/players/ericminio/badge.svg)
 
-http://yosethegame.com
+See it working : http://ericminio-yose.herokuapp.com/
